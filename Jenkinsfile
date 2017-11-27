@@ -1,6 +1,6 @@
 #!groovy
 properties(
-        [[$class: 'GithubProjectProperty', projectUrlStr: 'https://github.com/contino/moj-fees-register-infrastructure'],
+        [[$class: 'GithubProjectProperty', projectUrlStr: 'https://github.com/hmcts/fees-register-infrastructure'],
          pipelineTriggers([[$class: 'GitHubPushTrigger']])]
 )
 
