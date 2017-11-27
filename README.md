@@ -1,4 +1,4 @@
-# Infrastructure for the Rhubarb Product
+# Infrastructure for the fees-register Product
 
 Infrastructure contains 
-. A Web App
+. A banckend API app
