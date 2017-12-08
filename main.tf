@@ -10,6 +10,9 @@ module "fees-register-api" {
     POSTGRES_PORT     = "${module.fees-register-database.postgresql_listen_port}"
     POSTGRES_DATABASE = "${module.fees-register-database.postgresql_database}"
     POSTGRES_USER     = "${module.fees-register-database.user_name}"
+    SPRING_DATASOURCE_USERNAME = "${module.fees-register-database.user_name}"
+    SPRING_DATASOURCE_URL = "jdbc:postgresql://${module.fees-register-database.host_name}:${module.fees-register-database.postgresql_listen_port}/${module.fees-register-database.postgresql_database}"
+    SPRING_DATASOURCE_PASSWORD = "${module.fees-register-database.password}"
   }
 }
 
@@ -18,6 +21,7 @@ module "fees-register-database" {
   product             = "${var.product}"
   location            = "West Europe"
   env                 = "${var.env}"
-  postgresql_user     = "fradmin"
-  postgresql_password = "Password1"
+  postgresql_user = "fradmin"
+  postgresql_password = "${var.database-password}"
+  postgresql_database = "${var.database-name}"
 }
