@@ -13,7 +13,7 @@ variable "env" {
 }
 variable "microservice" {
   type = "string"
-  default = "document-management-store-app"
+  default = "fees-register-app"
 }
 variable "infrastructure_env" {
   default     = "dev"
