@@ -11,7 +11,7 @@ module "fees-register-api" {
     POSTGRES_DATABASE = "${module.fees-register-database.postgresql_database}"
     POSTGRES_USER     = "${module.fees-register-database.user_name}"
     SPRING_DATASOURCE_USERNAME = "${module.fees-register-database.user_name}"
-    SPRING_DATASOURCE_URL = "jdbc:postgresql://${module.fees-register-database.host_name}:${module.fees-register-database.postgresql_listen_port}/${module.fees-register-database.postgresql_database}"
+    SPRING_DATASOURCE_URL = "jdbc:postgresql://${module.fees-register-database.host_name}:${module.fees-register-database.postgresql_listen_port}/${var.database-name}"
     SPRING_DATASOURCE_PASSWORD = "${var.database-password}"
   }
 }
