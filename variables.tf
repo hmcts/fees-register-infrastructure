@@ -11,7 +11,10 @@ variable "location" {
 variable "env" {
   type = "string"
 }
-
+variable "microservice" {
+  type = "string"
+  default = "document-management-store-app"
+}
 variable "infrastructure_env" {
   default     = "dev"
   description = "Infrastructure environment to point to"
